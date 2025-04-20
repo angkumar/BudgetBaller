@@ -24,10 +24,10 @@ struct ContentView: View {
                   
                     
                     VStack{
-                        Text("TravelGuide")
+                        Text("BudgetBaller")
                             .font(.system(size: 60, weight: .bold, design: .default))
                             .foregroundColor(.white)
-                        Text("Discover the world")
+                        Text("Budgeting Made Easy!")
                             .font(.system(size: 30, weight: .light, design: .default))
                             .foregroundColor(.white)
                     }
@@ -37,7 +37,7 @@ struct ContentView: View {
                 .offset(y: -250)
                 
                 VStack {
-                    Text("Welcome to TravelGuide!")
+                    Text("Welcome to BudgetBaller!")
                         .font(.largeTitle)
                     InputFieldView(data: $userName, title: "Username or email:")
                     SecureFieldView(data: $password, title: "Password")
@@ -46,7 +46,7 @@ struct ContentView: View {
                 .offset(y: -200)// ✅ Use NavigationStack (iOS 16+)
                             VStack(spacing: 24) {
                                 Button {
-                                    if userName == "" && password == "" {
+                                    if userName == "Hello" && password == "Pasword" {
                                         isLoggedIn = true
                                     }
                                 } label: {
@@ -64,8 +64,7 @@ struct ContentView: View {
                             }
                             // ✅ Navigation trigger using state binding
                             .navigationDestination(isPresented: $isLoggedIn) {
-                                InputFieldView(data: $userName, title: "Username or email:")
-                            }
+                                Salary()                            }
                         }
                     }
                 

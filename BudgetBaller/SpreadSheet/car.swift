@@ -1,5 +1,5 @@
 //
-//  Salary.swift
+//  car.swift
 //  BudgetBaller
 //
 //  Created by Angad Kumar on 4/20/25.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct Salary: View {
-    @State public var income = ""
+struct car: View {
+    @State public var lease = ""
     @State private var isLoggedIn: Bool = false
     var body: some View {
         NavigationView {
@@ -22,7 +22,7 @@ struct Salary: View {
                   
                     
                     VStack{
-                        Text("Income")
+                        Text("Car")
                             .font(.system(size: 60, weight: .bold, design: .default))
                             .foregroundColor(.white)
                         Text("")
@@ -35,7 +35,7 @@ struct Salary: View {
                 .offset(y: -225)
                 
                 
-                Text("The first step is to find your income")
+                Text("How much are you spending on your car?")
                 .font(.system(size: 20, weight: .light, design: .default))
                 .frame(width: 390, height: 20)
                 .offset(y: -190)
@@ -43,13 +43,13 @@ struct Salary: View {
                 VStack{
                     Text("Your Monthly Income:")
                         .font(.system(size: 20, weight: .light, design: .default))
-                    InputFieldView(data: $income, title: "Income:")
+                    InputFieldView(data: $lease, title: "amount:")
                         .keyboardType(.decimalPad)
-                    Text("Income: \(income)")
+                    Text("amount: \(lease)")
                     
                     VStack(spacing: 24) {
                         Button {
-                            if income != "" {
+                            if lease != "" {
                                 isLoggedIn = true
                             }
                         } label: {
@@ -79,5 +79,5 @@ struct Salary: View {
 }
 
 #Preview {
-    Salary()
+    car()
 }
