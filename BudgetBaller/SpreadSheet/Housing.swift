@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Housing: View {
     @State public var rent = ""
+    @State public var utilities = ""
     @State private var isLoggedIn: Bool = false
     var body: some View {
         NavigationView {
@@ -41,11 +42,14 @@ struct Housing: View {
                 .offset(y: -185)
                 
                 VStack{
-                    Text("Your Monthly Spending on Housing (Rent):")
+                    Text("Your Monthly Spending on Housing (Rent) and insurance:")
                         .font(.system(size: 20, weight: .light, design: .default))
                     InputFieldView(data: $rent, title: "Rent/Mortgage Amount")
                         .keyboardType(.decimalPad)
                     Text("Amount: \(rent)")
+                    InputFieldView(data: $utilities, title: "House Insurance per month")
+                        .keyboardType(.decimalPad)
+                    Text("Amount: \(utilities)")
                     
                     VStack(spacing: 24) {
                         Button {

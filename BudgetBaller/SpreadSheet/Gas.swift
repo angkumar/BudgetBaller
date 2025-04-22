@@ -1,15 +1,14 @@
 //
-//  car.swift
+//  Gas.swift
 //  BudgetBaller
 //
-//  Created by Angad Kumar on 4/20/25.
+//  Created by Angad Kumar on 4/21/25.
 //
 
 import SwiftUI
 
-struct car: View {
-    @State public var lease = ""
-    @State public var mileage = ""
+struct Gas: View {
+    @State public var gas = ""
     @State private var isLoggedIn: Bool = false
     var body: some View {
         NavigationView {
@@ -23,7 +22,7 @@ struct car: View {
                   
                     
                     VStack{
-                        Text("Car")
+                        Text("Gas")
                             .font(.system(size: 60, weight: .bold, design: .default))
                             .foregroundColor(.white)
                         Text("")
@@ -36,24 +35,21 @@ struct car: View {
                 .offset(y: -225)
                 
                 
-                Text("How much are you spending on your car?")
+                Text("How much are you spending on gas for your?")
                 .font(.system(size: 20, weight: .light, design: .default))
                 .frame(width: 390, height: 20)
                 .offset(y: -190)
                 
                 VStack{
-                    Text("Your Monthly Income:")
+                    Text("Your Monthly spending:")
                         .font(.system(size: 20, weight: .light, design: .default))
-                    InputFieldView(data: $lease, title: "amount for the car:")
+                    InputFieldView(data: $gas, title: "amount:")
                         .keyboardType(.decimalPad)
-                    Text("amount: \(lease)")
-                    InputFieldView(data: $mileage, title: "amount for car insurance:")
-                        .keyboardType(.decimalPad)
-                    Text("amount: \(mileage)")
+                    Text("amount: \(gas)")
                     
                     VStack(spacing: 24) {
                         Button {
-                            if lease != "" {
+                            if gas != "" {
                                 isLoggedIn = true
                             }
                         } label: {
@@ -71,7 +67,7 @@ struct car: View {
                     }
                     // ✅ Navigation trigger using state binding
                     .navigationDestination(isPresented: $isLoggedIn) {
-                        Gas()                            }
+                        Housing()                            }
                 }
                 .frame(width: 390, height: 180)
                 .offset(y: -150)
@@ -83,5 +79,5 @@ struct car: View {
 }
 
 #Preview {
-    car()
+    Gas()
 }
