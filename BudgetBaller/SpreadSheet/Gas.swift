@@ -35,7 +35,7 @@ struct Gas: View {
                 .offset(y: -225)
                 
                 
-                Text("How much are you spending on gas for your?")
+                Text("How much are you spending on gas for your car?")
                 .font(.system(size: 20, weight: .light, design: .default))
                 .frame(width: 390, height: 20)
                 .offset(y: -190)
