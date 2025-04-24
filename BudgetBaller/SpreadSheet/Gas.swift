@@ -41,11 +41,11 @@ struct Gas: View {
                 .offset(y: -190)
                 
                 VStack{
-                    Text("Your Monthly spending:")
+                    Text("Your Monthly Spending:")
                         .font(.system(size: 20, weight: .light, design: .default))
-                    InputFieldView(data: $gas, title: "amount:")
+                    InputFieldView(data: $gas, title: "Amount:")
                         .keyboardType(.decimalPad)
-                    Text("amount: \(gas)")
+                    Text("Amount: \(gas)")
                     
                     VStack(spacing: 24) {
                         Button {
