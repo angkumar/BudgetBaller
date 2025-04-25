@@ -22,7 +22,7 @@ struct Gas: View {
                   
                     
                     VStack{
-                        Text("Gas")
+                        Text("Gas/petrol")
                             .font(.system(size: 60, weight: .bold, design: .default))
                             .foregroundColor(.white)
                         Text("")
