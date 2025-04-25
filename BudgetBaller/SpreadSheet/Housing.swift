@@ -71,7 +71,10 @@ struct Housing: View {
                     }
                     // ✅ Navigation trigger using state binding
                     .navigationDestination(isPresented: $isLoggedIn) {
-                        car()                            }
+                        car()
+                        SpreadSheetMain()
+                    }
+                    
                 }
                 .frame(width: 390, height: 180)
                 .offset(y: -150)

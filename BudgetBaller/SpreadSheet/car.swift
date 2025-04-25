@@ -71,7 +71,7 @@ struct car: View {
                     }
                     // ✅ Navigation trigger using state binding
                     .navigationDestination(isPresented: $isLoggedIn) {
-                        Gas()                            }
+                        SpreadSheetMain()                            }
                 }
                 .frame(width: 390, height: 180)
                 .offset(y: -150)

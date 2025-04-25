@@ -1,16 +1,20 @@
 //
-//  Salary.swift
+//  Sheet.swift
 //  BudgetBaller
 //
-//  Created by Angad Kumar on 4/20/25.
+//  Created by Angad Kumar on 4/25/25.
 //
 
 import SwiftUI
 
-struct Salary: View {
+struct Sheet: View {
     @State public var income = ""
     @State private var isLoggedIn: Bool = false
-    
+    @State public var rent = ""
+    @State public var utilities = ""
+    @State public var lease = ""
+    @State public var mileage = ""
+    @State public var gas = ""
     
     
     
@@ -26,10 +30,10 @@ struct Salary: View {
                   
                     
                     VStack{
-                        Text("Income")
+                        Text("Budget Baller")
                             .font(.system(size: 60, weight: .bold, design: .default))
                             .foregroundColor(.white)
-                        Text("")
+                        Text("Lets GOOO!")
                             .font(.system(size: 30, weight: .light, design: .default))
                             .foregroundColor(.white)
                     }
@@ -39,19 +43,40 @@ struct Salary: View {
                 .offset(y: -225)
                 
                 
-                Text("The first step is to find your income")
-                .font(.system(size: 20, weight: .light, design: .default))
-                .frame(width: 390, height: 20)
-                .offset(y: -190)
+                
                 
                 VStack{
+                    Text("The first step is to find your income")
+                    .font(.system(size: 20, weight: .light, design: .default))
+                    .frame(width: 390, height: 20)
+                    .offset(y: 0)
+                    
                     Text("Your Monthly Income:")
                         .font(.system(size: 20, weight: .light, design: .default))
                     InputFieldView(data: $income, title: "Income:")
                         .keyboardType(.decimalPad)
                     Text("Income: \(income)")
-                    
-                    
+                    Text("Your Monthly Spending on Housing (Rent) and insurance:")
+                        .font(.system(size: 20, weight: .light, design: .default))
+                    InputFieldView(data: $rent, title: "Rent/Mortgage Amount")
+                        .keyboardType(.decimalPad)
+                    Text("Amount: \(rent)")
+                    InputFieldView(data: $utilities, title: "House Insurance per month")
+                        .keyboardType(.decimalPad)
+                    Text("Amount: \(utilities)")
+                    Text("Your Monthly Spending on your car:")
+                        .font(.system(size: 20, weight: .light, design: .default))
+                    InputFieldView(data: $lease, title: "amount for the car:")
+                        .keyboardType(.decimalPad)
+                    Text("amount: \(lease)")
+                    InputFieldView(data: $mileage, title: "amount for car insurance:")
+                        .keyboardType(.decimalPad)
+                    Text("amount: \(mileage)")
+                    Text("Your Monthly Spending on gas for your car:")
+                        .font(.system(size: 20, weight: .light, design: .default))
+                    InputFieldView(data: $gas, title: "Amount:")
+                        .keyboardType(.decimalPad)
+                    Text("Amount: \(gas)")
                     
                     VStack(spacing: 24) {
                         Button {
@@ -73,13 +98,12 @@ struct Salary: View {
                     }
                     // ✅ Navigation trigger using state binding
                     .navigationDestination(isPresented: $isLoggedIn) {
-                        Housing()
-                        SpreadSheetMain()
+                        SpreadSheetMain(salary1: income, housing1: rent, housing2: utilities, car1: lease, car2: mileage, gas: gas)
                             .offset(y:500)
                     }
                 }
                 .frame(width: 390, height: 180)
-                .offset(y: -150)
+                .offset(y: 200)
                 
                 
             }
@@ -88,5 +112,5 @@ struct Salary: View {
 }
 
 #Preview {
-    Salary()
+    Sheet()
 }
