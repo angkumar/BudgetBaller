@@ -46,7 +46,7 @@ struct ContentView: View {
                 .offset(y: -200)// ✅ Use NavigationStack (iOS 16+)
                             VStack(spacing: 24) {
                                 Button {
-                                    if userName == "Hello" && password == "Pasword" {
+                                    if userName == "" && password == "" {
                                         isLoggedIn = true
                                     }
                                 } label: {

@@ -18,6 +18,7 @@ struct Sheet: View {
     
     
     
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -55,28 +56,29 @@ struct Sheet: View {
                         .font(.system(size: 20, weight: .light, design: .default))
                     InputFieldView(data: $income, title: "Income:")
                         .keyboardType(.decimalPad)
-                    Text("Income: \(income)")
+                        
+                    
                     Text("Your Monthly Spending on Housing (Rent) and insurance:")
                         .font(.system(size: 20, weight: .light, design: .default))
                     InputFieldView(data: $rent, title: "Rent/Mortgage Amount")
                         .keyboardType(.decimalPad)
-                    Text("Amount: \(rent)")
+                    
                     InputFieldView(data: $utilities, title: "House Insurance per month")
                         .keyboardType(.decimalPad)
-                    Text("Amount: \(utilities)")
+                    
                     Text("Your Monthly Spending on your car:")
                         .font(.system(size: 20, weight: .light, design: .default))
                     InputFieldView(data: $lease, title: "amount for the car:")
                         .keyboardType(.decimalPad)
-                    Text("amount: \(lease)")
+                    
                     InputFieldView(data: $mileage, title: "amount for car insurance:")
                         .keyboardType(.decimalPad)
-                    Text("amount: \(mileage)")
+                    
                     Text("Your Monthly Spending on gas for your car:")
                         .font(.system(size: 20, weight: .light, design: .default))
                     InputFieldView(data: $gas, title: "Amount:")
                         .keyboardType(.decimalPad)
-                    Text("Amount: \(gas)")
+                    
                     
                     VStack(spacing: 24) {
                         Button {
@@ -98,12 +100,11 @@ struct Sheet: View {
                     }
                     // ✅ Navigation trigger using state binding
                     .navigationDestination(isPresented: $isLoggedIn) {
-                        SpreadSheetMain(salary1: income, housing1: rent, housing2: utilities, car1: lease, car2: mileage, gas: gas)
-                            .offset(y:500)
+                        SpreadSheetMain(sheet: self)
                     }
                 }
                 .frame(width: 390, height: 180)
-                .offset(y: 200)
+                .offset(y: 0)
                 
                 
             }
