@@ -14,6 +14,7 @@ struct SpreadSheetMain: View {
     @State private var car1: String
     @State private var car2: String
     @State private var gas: String
+    @State private var isLoggedIn: Bool = false
 
     init(sheet: Sheet = Sheet()) {
         _salary1 = State(initialValue: String(sheet.income))
@@ -91,6 +92,30 @@ struct SpreadSheetMain: View {
                 .offset(y:-200)
             detailView
                 .offset(y:240)
+            
+            VStack(spacing: 24) {
+                Button {
+                    if salary1 != "" {
+                        isLoggedIn = true
+                    }
+                } label: {
+                    Text("Click to modify")
+                        .fontWeight(.heavy)
+                        .font(.title3)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(LinearGradient(gradient: Gradient(colors: [.green, .blue]), startPoint: .leading, endPoint: .trailing))
+                        .cornerRadius(40)
+                }
+                .frame(width: 250)
+                .offset(y: 0) // ✅ Your custom offset
+            }
+            // ✅ Navigation trigger using state binding
+            .navigationDestination(isPresented: $isLoggedIn) {
+                Sheet()
+            }
+            .offset(y:325)
         }
     }
 }
