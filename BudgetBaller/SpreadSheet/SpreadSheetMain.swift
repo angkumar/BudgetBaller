@@ -99,7 +99,7 @@ struct SpreadSheetMain: View {
                         isLoggedIn = true
                     }
                 } label: {
-                    Text("Click to modify")
+                    Text("Click to Modify")
                         .fontWeight(.heavy)
                         .font(.title3)
                         .frame(maxWidth: .infinity)
