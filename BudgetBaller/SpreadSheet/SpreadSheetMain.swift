@@ -75,6 +75,9 @@ struct SpreadSheetMain: View {
                 .padding(.vertical, 10)
             Text("Money Left to spend: \((Double(salary1) ?? 0) - total)")
                 .padding(.vertical, 10)
+            if (Double(salary1) ?? 0) - total < 0 {
+                Text("Ur broke ma boi")
+            }
         }
         .frame(width: 350)
         .padding()
@@ -115,7 +118,7 @@ struct SpreadSheetMain: View {
             .navigationDestination(isPresented: $isLoggedIn) {
                 Sheet()
             }
-            .offset(y:325)
+            .offset(y:350)
         }
     }
 }
