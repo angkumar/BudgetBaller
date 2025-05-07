@@ -76,7 +76,7 @@ struct SpreadSheetMain: View {
             Text("Money Left to spend: \((Double(salary1) ?? 0) - total)")
                 .padding(.vertical, 10)
             if (Double(salary1) ?? 0) - total < 0 {
-                Text("Ur broke ma boi: click below to save more -->")
+                Text("Ur broke ma boi. Click below to save more -->")
             }
         }
         .frame(width: 350)
