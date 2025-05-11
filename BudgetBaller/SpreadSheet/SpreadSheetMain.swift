@@ -47,7 +47,7 @@ struct SpreadSheetMain: View {
                 Text("Budget Baller")
                     .font(.system(size: 60, weight: .bold, design: .default))
                     .foregroundColor(.white)
-                Text("Your Budget Is Here!")
+                Text("Your Budget is Here!")
                     .font(.system(size: 30, weight: .light, design: .default))
                     .foregroundColor(.white)
             }
