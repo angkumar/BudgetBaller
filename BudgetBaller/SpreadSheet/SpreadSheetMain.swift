@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct SpreadSheetMain: View {
-    @State private var salary1: String
-    @State private var housing1: String
-    @State private var housing2: String
-    @State private var car1: String
-    @State private var car2: String
-    @State private var gas: String
-    @State private var isLoggedIn: Bool = false
+    @State public var salary1: String
+    @State public var housing1: String
+    @State public var housing2: String
+    @State public var car1: String
+    @State public var car2: String
+    @State public var gas: String
+    @State public var isLoggedIn: Bool = false
 
     init(sheet: Sheet = Sheet()) {
         _salary1 = State(initialValue: String(sheet.income))
@@ -51,10 +51,9 @@ struct SpreadSheetMain: View {
                     .font(.system(size: 30, weight: .light, design: .default))
                     .foregroundColor(.white)
             }
-            .padding(.top, 125)
         }
         .frame(width: 750, height: 400)
-        .offset(y: -200)
+        .offset(y: -100)
     }
 
     var detailView: some View {
@@ -102,7 +101,7 @@ struct SpreadSheetMain: View {
                         isLoggedIn = true
                     }
                 } label: {
-                    Text("Click Here To Modify -->")
+                    Text("Click Here To Save -->")
                         .fontWeight(.heavy)
                         .font(.title3)
                         .frame(maxWidth: .infinity)
@@ -116,7 +115,7 @@ struct SpreadSheetMain: View {
             }
             // ✅ Navigation trigger using state binding
             .navigationDestination(isPresented: $isLoggedIn) {
-                Sheet()
+                cutdown()
             }
             .offset(y:350)
         }
