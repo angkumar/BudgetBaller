@@ -46,7 +46,7 @@ struct cutdown: View {
                 .font(.largeTitle)
                 .padding()
 
-            Text("Total Expenses: \(total, specifier: "%.2f")")
+            Text("Total Expendature: \(total, specifier: "%.2f")")
                 .font(.title2)
 
             ForEach(checkerMessages(), id: \.self) { message in
