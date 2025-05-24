@@ -64,7 +64,8 @@ struct ContentView: View {
                             }
                             // ✅ Navigation trigger using state binding
                             .navigationDestination(isPresented: $isLoggedIn) {
-                                Sheet()                            }
+                                SwiftUIView()
+                            }
                         }
                     }
                 
