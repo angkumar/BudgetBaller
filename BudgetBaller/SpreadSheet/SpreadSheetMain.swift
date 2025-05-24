@@ -101,7 +101,7 @@ struct SpreadSheetMain: View {
                         isLoggedIn = true
                     }
                 } label: {
-                    Text("Click Here To Save -->")
+                    Text("Click Here To Not Spend Money")
                         .fontWeight(.heavy)
                         .font(.title3)
                         .frame(maxWidth: .infinity)
