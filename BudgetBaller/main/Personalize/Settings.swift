@@ -34,7 +34,7 @@ struct Settings: View {
                     .padding(.top, 125)
                 }
                 .frame(width: 750, height: 400)
-                .offset(y: -225)
+                .offset(y: -205)
                 
                 VStack {
                     Text("Welcome to Settings!")

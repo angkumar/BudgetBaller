@@ -14,9 +14,13 @@ struct SwiftUIView: View {
                 .tabItem {
                     Label("Budget Maker", systemImage: "house")
                 }
-            first()
+            ProfileView()
                 .tabItem {
-                    Label("Budget Maker", systemImage: "house")
+                    Label("Profile", systemImage: "person.crop.circle")
+                }
+            Settings()
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
                 }
         }
         .background(Color.black.opacity(1))
