@@ -27,7 +27,7 @@ struct Settings: View {
                         Text("Settings")
                             .font(.system(size: 60, weight: .bold, design: .default))
                             .foregroundColor(.white)
-                        Text("Settings")
+                        Text("Options")
                             .font(.system(size: 30, weight: .light, design: .default))
                             .foregroundColor(.white)
                     }
