@@ -48,7 +48,7 @@ struct Settings: View {
                         
                         DisclosureGroup("Home", isExpanded: $homeExpanded) {
                             NavigationLink(destination: first()) {
-                                Label("Dashboard", systemImage: "house.fill")
+                                Label("Home", systemImage: "house.fill")
                             }
                             NavigationLink(destination: Text("Activity")) {
                                 Label("Activity", systemImage: "list.bullet")
