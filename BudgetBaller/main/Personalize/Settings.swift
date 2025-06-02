@@ -50,7 +50,7 @@ struct Settings: View {
                             NavigationLink(destination: first()) {
                                 Label("Home", systemImage: "house.fill")
                             }
-                            NavigationLink(destination: Text("Activity")) {
+                            NavigationLink(destination: Text("Sigma Sigma")) {
                                 Label("Activity", systemImage: "list.bullet")
                             }
                         }
