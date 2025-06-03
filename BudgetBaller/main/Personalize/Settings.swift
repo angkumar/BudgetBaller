@@ -43,7 +43,7 @@ struct Settings: View {
                     
                     List {
                         
-                        Text("Options")
+                        Text("HE HE")
                             .font(.largeTitle)
                         
                         DisclosureGroup("Home", isExpanded: $homeExpanded) {
