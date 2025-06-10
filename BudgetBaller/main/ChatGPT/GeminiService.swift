@@ -9,7 +9,7 @@
 import Foundation
 
 class GeminiService {
-    private let apiKey = "AIzaSyDZDZWpajFjEQmWibIV6pRzeg4n-JvbZso" // Replace this
+    private let apiKey = "" // Replace this
     private let endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent"
 
     func sendMessage(prompt: String, completion: @escaping (String?) -> Void) {
