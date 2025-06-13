@@ -37,7 +37,7 @@ struct Settings: View {
                 .offset(y: -205)
                 
                 VStack {
-                    Text("Bro Sigma Settings!")
+                    Text("Bro Sigma sigma!")
                         .font(.largeTitle)
                         .offset(y: -200)
                     
