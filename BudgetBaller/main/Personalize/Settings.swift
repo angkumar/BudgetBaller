@@ -46,7 +46,7 @@ struct Settings: View {
                         Text("HEE BRO")
                             .font(.largeTitle)
                         
-                        DisclosureGroup("Home", isExpanded: $homeExpanded) {
+                        DisclosureGroup("bro", isExpanded: $homeExpanded) {
                             NavigationLink(destination: first()) {
                                 Label("Home", systemImage: "house.fill")
                             }
