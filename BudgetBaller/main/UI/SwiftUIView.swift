@@ -22,10 +22,6 @@ struct SwiftUIView: View {
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }
-            GeminiChatView()
-                .tabItem {
-                    Label("Chat", systemImage: "message")
-                }
         }
         .background(Color.black.opacity(1))
     }
